@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/svMain"
+    android:background="@color/bg_color"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/bg_color"
+        android:orientation="vertical" >
+
+        <include layout="@layout/only_header" />
+ 
+        <!-- 银行推荐 -->
+<!--
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:layout_marginTop="4dp"
+            android:background="@color/white"
+            android:text="银行推荐"
+            android:textSize="16sp" />-->
+
+        <com.common.MyGridView
+            android:id="@+id/grid"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/bg_color"
+            android:columnWidth="90dp"
+            android:gravity="center"
+            android:horizontalSpacing="2dp"
+            android:listSelector="@null"
+            android:numColumns="3"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="2dp" 
+            android:layout_marginTop="3dp"/>
+    </LinearLayout>
+
+</ScrollView>

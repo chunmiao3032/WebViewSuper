@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/svMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/bg_color"
+        android:orientation="vertical"
+        android:paddingLeft="3dp"
+        android:paddingRight="3dp" >
+
+        <include layout="@layout/only_header" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/myheader"
+            android:gravity="top" >
+
+            <ListView
+                android:id="@+id/lv_menuLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone" >
+            </ListView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/myheader"
+            android:gravity="top" >
+
+            <ListView
+                android:id="@+id/lv_menuCenter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone" >
+            </ListView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/myheader"
+            android:gravity="top" >
+
+            <ListView
+                android:id="@+id/lv_menuRight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone" >
+            </ListView>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvRowCount"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="3dip"
+            android:layout_marginTop="3dip"
+            android:background="@color/bg_color"
+            android:text="正在为您查找相关结果"
+            android:visibility="gone" />
+
+        <ListView
+            android:id="@id/android:list"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <com.common.MyGridView
+            android:id="@+id/grid"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="4dp"
+            android:background="@color/bg_color"
+            android:gravity="center"
+            android:horizontalSpacing="2dp"
+            android:listSelector="@null"
+            android:numColumns="4"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="2dp" />
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- <string name="app_name">"测试科技"</string> -->
+    <!-- <string name="app_name">"金斗云"</string>-->
+    <!-- <string name="app_name">"完美金融"</string> -->
+    <!-- <string name="app_name">"卡神通"</string> -->
+    <!-- <string name="app_name">"中创科技"</string> -->
+    <string name="app_name">"全民金融"</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="about">关于</string>
+
+</resources>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/tabhost"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" >
+        </FrameLayout>
+
+        <!-- 隐藏TabWidget -->
+
+        <TabWidget
+            android:id="@android:id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" >
+        </TabWidget>
+
+        <!-- 视觉上,用单选按钮替代TabWidget -->
+
+        <RadioGroup
+            android:id="@+id/main_radiogroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="8dp" >
+
+            <RadioButton
+                android:id="@+id/tab_icon_weixin" 
+                android:checked="true" 
+                android:text="信用卡" />
+
+            <RadioButton
+                android:id="@+id/tab_icon_address" 
+                android:text="网贷"  />
+
+            <RadioButton
+                android:id="@+id/tab_icon_friend" 
+                android:text="贷款" />
+
+            <RadioButton
+                android:id="@+id/tab_icon_setting" 
+                android:text="社区"  />
+        </RadioGroup>
+    </LinearLayout>
+
+</TabHost>

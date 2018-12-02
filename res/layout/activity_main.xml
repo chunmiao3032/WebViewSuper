@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/svMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/bg_color"
+        android:orientation="vertical" >
+
+        <!-- 显示图片轮播 -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="150dp"
+            android:orientation="horizontal" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp" >
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/tuijian_pager"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_alignParentTop="true" >
+                </android.support.v4.view.ViewPager>
+
+                <RadioGroup
+                    android:id="@+id/radioGroup1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/tuijian_pager"
+                    android:layout_centerHorizontal="true"
+                    android:button="@drawable/scroll_image_radio"
+                    android:clickable="false"
+                    android:orientation="horizontal" >
+
+                    <RadioButton
+                        android:id="@+id/radio0"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:button="@drawable/scroll_image_radio"
+                        android:checked="true"
+                        android:clickable="false" />
+
+                    <RadioButton
+                        android:id="@+id/radio1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:button="@drawable/scroll_image_radio"
+                        android:clickable="false" />
+
+                    <RadioButton
+                        android:id="@+id/radio2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:button="@drawable/scroll_image_radio"
+                        android:clickable="false" />
+
+                    <RadioButton
+                        android:id="@+id/radio3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:button="@drawable/scroll_image_radio"
+                        android:clickable="false" />
+
+                    <RadioButton
+                        android:id="@+id/radio4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:button="@drawable/scroll_image_radio"
+                        android:clickable="false" />
+                </RadioGroup>
+
+                <RelativeLayout
+                    android:id="@+id/rlLayOut"
+                    android:layout_width="fill_parent"
+                    android:layout_height="22dp"
+                    android:background="#88ffffff"
+                    android:gravity="center_horizontal" >
+
+                    <TextView
+                        android:id="@+id/tvLocation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dip"
+                        android:gravity="center_vertical"
+                        android:text="未定位城市" />
+
+                    <TextView
+                        android:id="@+id/tvChangeLocation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dip"
+                        android:layout_marginLeft="4dp"
+                        android:layout_toRightOf="@+id/tvLocation"
+                        android:gravity="center_vertical"
+                        android:text="点击[切换城市]" />
+
+                    <TextView
+                        android:id="@+id/tvCloseLocation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dip"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/tvChangeLocation"
+                        android:gravity="center_vertical"
+                        android:text="关闭" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="90dp"
+                    android:layout_height="30dp"
+                    android:layout_below="@+id/rlLayOut"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#88ffffff"
+                    android:gravity="center" >
+
+                    <ImageView
+                        android:id="@+id/ivLocation1"
+                        android:layout_width="20dip"
+                        android:layout_height="22dip"
+                        android:src="@drawable/maker" />
+
+                    <TextView
+                        android:id="@+id/tvLocation1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="22dp"
+                        android:layout_toRightOf="@+id/ivLocation1"
+                        android:gravity="center_vertical"
+                        android:onClick="changeCity"
+                        android:text="未定位城市" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </LinearLayout>
+        <!-- 以上显示图片轮播 -->
+
+
+        <!-- 滚动通知*办卡了 -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@android:color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/laba" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextSwitcher
+                    android:id="@+id/textSwitcher_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:inAnimation="@anim/push_up_in"
+                    android:outAnimation="@anim/push_up_out"
+                    android:padding="0dp" >
+                </TextSwitcher>
+            </LinearLayout>
+        </LinearLayout>
+        <!-- ******************************************************************************************************************************************* -->
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="1dp"
+            android:layout_marginTop="4dp"
+            android:background="@color/white"
+            android:text="快速申请区"
+            android:textSize="16sp"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_weight="0.6"
+            android:orientation="vertical" >
+
+            <!-- ************************************************************************************ -->
+            <!-- 快速办卡  + 申卡进度　 -->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0dip"
+                android:layout_weight="1"
+                android:orientation="horizontal" >
+
+                <!-- 快速办卡 -->
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_margin="1dip"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+
+                    <ImageButton
+                        android:id="@+id/ivCard"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:background="@drawable/ksbk" >
+                    </ImageButton>
+                </LinearLayout>
+                <!-- 申卡进度 -->
+
+                <LinearLayout
+                    android:layout_width="0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_margin="1dip"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+
+                    <ImageButton
+                        android:id="@+id/ibXHBK"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:background="@drawable/jindu" />
+                </LinearLayout>
+            </LinearLayout>
+            <!-- ************************************************************************************ -->
+            <!-- p2p贷款 + 快速贷款 -->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0dip"
+                android:layout_weight="1"
+                android:orientation="horizontal" >
+
+                <!-- p2p贷款 按钮 -->
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_margin="1dip"
+                    android:layout_weight="1"
+                    android:background="@color/bg_color"
+                    android:orientation="vertical" >
+
+                    <ImageButton
+                        android:id="@+id/btLineLoan"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:background="@drawable/ksp2pdk" >
+                    </ImageButton>
+                </LinearLayout>
+
+                <!-- 快速贷款 按钮 -->
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_margin="1dip"
+                    android:layout_weight="1"
+                    android:background="@android:color/white"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <ImageButton
+                        android:id="@+id/btLoan"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:background="@drawable/ksxydk" >
+                    </ImageButton>
+                </LinearLayout>
+            </LinearLayout>
+            <!-- ************************************************************************** -->
+            <!-- 大学生创业，白金卡 -->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0dip"
+                android:layout_marginTop="1dp"
+                android:layout_weight="1"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:layout_width="0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_margin="1dip"
+                    android:layout_weight="1"
+                    android:background="@android:color/white"
+                    android:orientation="horizontal" >
+
+                    <ImageButton
+                        android:id="@+id/ibBHBK"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:background="@drawable/dxsloan" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_margin="1dip"
+                    android:layout_weight="1"
+                    android:background="@android:color/white"
+                    android:orientation="horizontal" >
+
+                    <ImageButton
+                        android:id="@+id/ibGEBK"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:background="@drawable/baijinka" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- 在线口子 信用卡攻略 -->
+            <!--
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0dip"
+                android:layout_weight="1"
+                android:orientation="horizontal" >
+            </LinearLayout>
+            -->
+        </LinearLayout>
+
+        <!-- *************************************************************************************************************** -->
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="1dp"
+            android:layout_marginTop="4dp"
+            android:background="@color/white"
+            android:text="办卡功能区"
+            android:textSize="16sp" />
+        <!--
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_weight="0.4"
+            android:orientation="horizontal" >
+        </LinearLayout>
+        -->
+
+        <com.common.MyGridView
+            android:id="@+id/grid2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/bg_color"
+            android:gravity="center"
+            android:horizontalSpacing="2dp"
+            android:listSelector="@null"
+            android:numColumns="4"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="2dp" />
+        <!-- *************************************************************************************************************** -->
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="1dp"
+            android:layout_marginTop="4dp"
+            android:background="@color/white"
+            android:text="会员学习区"
+            android:textSize="16sp" />
+        <!-- 一键提额，企业查询，征信查询 -->
+        <!--
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_weight="0.4"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_margin="1dip"
+                android:layout_weight="0.5"
+                android:background="@android:color/white"
+                android:orientation="horizontal" >
+
+                <ImageButton
+                    android:id="@+id/ibYJTE"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:src="@drawable/kste" />
+            </LinearLayout>
+ 
+            <LinearLayout
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_margin="1dip"
+                android:layout_weight="0.5"
+                android:background="@android:color/white"
+                android:orientation="horizontal" >
+
+                <ImageButton
+                    android:id="@+id/ibQYCX"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:src="@drawable/qycx" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_margin="1dip"
+                android:layout_weight="0.5"
+                android:background="@android:color/white"
+                android:orientation="horizontal" >
+
+                <ImageButton
+                    android:id="@+id/ibZXCX"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:src="@drawable/zxcx" />
+            </LinearLayout>
+        </LinearLayout>
+        -->
+
+        <com.common.MyGridView
+            android:id="@+id/grid3"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/bg_color"
+            android:gravity="center"
+            android:horizontalSpacing="2dp"
+            android:listSelector="@null"
+            android:numColumns="4"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="2dp" />
+        <!-- *************************************************************************************************************** -->
+        <!-- 银行推荐 -->
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:layout_marginTop="4dp"
+            android:background="@color/white"
+            android:text="银行推荐区"
+            android:textSize="16sp" />
+
+        <com.common.MyGridView
+            android:id="@+id/grid"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/bg_color"
+            android:columnWidth="90dp"
+            android:gravity="center"
+            android:horizontalSpacing="2dp"
+            android:listSelector="@null"
+            android:numColumns="4"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="2dp" />
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.webviewPre"
+    android:versionCode="1"
+    android:versionName="2.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="18" />
+    <!-- 访问网络的权限 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.READ_LOGS" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.VIBRATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" >
+    </uses-permission>
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/qmjr"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" 
+        android:name="com.common.UserInfo">
+
+        <!-- 配置KEY 2014-7-5 -->
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="sGFSyZlrvnHGr9GipH70G6Nd" />
+
+        <activity
+            android:name="com.example.webviewPre.TabHostActivity"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Light.NoTitleBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.webviewPre.LocationActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name="com.example.webviewPre.MainActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name="com.example.webviewPre.WebViewActivity"
+            android:configChanges="orientation|screenSize"
+            android:hardwareAccelerated="true" />
+        <activity
+            android:name="com.example.webviewPre.CardShowActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name="com.example.webviewPre.CardMainSuperActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name="com.example.webviewPre.CardShow_DtlInfoActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name="com.example.webviewPre.LoanMainSuperActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name="com.example.webviewPre.OutLinkShowSuperActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name="com.droid.Activity01"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name="com.example.webviewPre.LoanShowActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name="com.example.webviewPre.AddQuotaShowActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name="com.example.webviewPre.AddQuotaShow1Activity"
+            android:configChanges="orientation|screenSize" />
+        <!--
+             <activity
+            android:name=".TabHostActivity"
+            android:configChanges="orientation|screenSize" />
+        -->
+        <activity
+            android:name="com.example.webviewPre.WebViewBBSActivity"
+            android:configChanges="orientation|screenSize"
+            android:hardwareAccelerated="true" />
+        <activity
+            android:name="com.example.webviewPre.FindPwdActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name="com.example.webviewPre.RegisterActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name="com.example.webviewPre.LoginActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name="com.example.webviewPre.CardApplyQueryActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name="com.example.webviewsuper.AddQuotaMainSuperActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name="com.example.webviewsuper.CardMainSuperActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name="com.example.webviewsuper.LoanMainSuperActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name="com.example.webviewsuper.MainSuperActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name="com.example.webviewsuper.OtherAppMainSuperActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name="com.example.webviewsuper.OutLinkShowSuperActivity"
+            android:configChanges="orientation|screenSize" />
+
+        <!-- 声明百度定位API的定位服务 -->
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" >
+        </service>
+        <service android:name="com.service.CardLogService" >
+            <intent-filter>
+                <action android:name="com.service.CardLogService" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="center_vertical"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:layout_margin="0dp" >
+
+  
+<!--  
+        <ImageButton
+            android:id="@+id/ItemImage1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" 
+            android:scaleType="fitXY"   
+            android:background="@color/transparent"/> 
+-->
+
+ <com.common.SquareImageView
+        android:id="@+id/ItemImage1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scaleType="fitXY"     />
+
+    <TextView
+        android:id="@+id/tvTitle1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:layout_gravity="center_horizontal"
+        android:text="Title"
+        android:textColor="@android:color/black"
+        android:textSize="15dp" 
+         android:layout_marginBottom="15dp" 
+         android:visibility="gone" >
+    </TextView>
+
+    <TextView
+        android:id="@+id/tvDesc1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="30dp"
+        android:text="Info"
+        android:textColor="@color/grgray"
+        android:visibility="gone" >
+    </TextView>
+
+</LinearLayout>

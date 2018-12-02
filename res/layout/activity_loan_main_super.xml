@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/svMain"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/bg_color"
+        android:orientation="vertical"  >
+
+        <include layout="@layout/only_header" />
+
+         
+        <!-- ******************************信用贷款********************************** -->
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="1dp"
+            android:layout_marginTop="4dp"
+            android:background="@color/white"
+            android:text="信用贷款"
+            android:textSize="16sp" 
+            android:gravity="center" />
+
+        <com.common.MyGridView
+            android:id="@+id/grid"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/bg_color"
+            android:gravity="center"
+            android:horizontalSpacing="2dp"
+            android:listSelector="@null"
+            android:numColumns="3"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="2dp" />
+        <!-- ******************************P2P网贷********************************** -->
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="1dp"
+            android:layout_marginTop="4dp"
+            android:background="@color/white"
+            android:text="P2P网贷"
+            android:textSize="16sp" 
+            android:gravity="center" />
+
+        <com.common.MyGridView
+            android:id="@+id/grid2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/bg_color"
+            android:gravity="center"
+            android:horizontalSpacing="2dp"
+            android:listSelector="@null"
+            android:numColumns="3"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="2dp" />
+        
+            <!-- ******************************大学生贷款********************************** -->
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="1dp"
+            android:layout_marginTop="4dp"
+            android:background="@color/white"
+            android:text="大学生贷款"
+            android:textSize="16sp"
+            android:gravity="center" />
+
+        <com.common.MyGridView
+            android:id="@+id/grid3"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/bg_color"
+            android:gravity="center"
+            android:horizontalSpacing="2dp"
+            android:listSelector="@null"
+            android:numColumns="3"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="2dp" />
+    </LinearLayout>
+
+</ScrollView>
